@@ -1,6 +1,7 @@
 
 
 
+import { Link } from "react-router-dom";
 function Header(){
     
     return <>
@@ -22,12 +23,12 @@ function Header(){
   </a>
   <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span className="navbar-toggler-icon"></span></button>
   <div className="collapse navbar-collapse" id="navbarCollapse">
-    <div className="navbar-nav ms-auto p-4 p-lg-0"><a href="https://www.free-css.com/free-css-templates" className="nav-item nav-link active">Home</a> <a href="pages/about.php" className="nav-item nav-link">About</a> <a href="pages/service.php" className="nav-item nav-link">Service</a>
+    <div className="navbar-nav ms-auto p-4 p-lg-0"><Link to="/Home" className="nav-item nav-link active">Home</Link> <Link to="/About" className="nav-item nav-link">About</Link> <Link to="/Service" className="nav-item nav-link">Service</Link>
       <div className="nav-item dropdown"><a href="javascript:void(0);" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Get Involve</a>
         <div className="dropdown-menu rounded-0 rounded-bottom m-0"><a href="pages/feature.php" className="dropdown-item">Volunteer Ragistration</a> <a href="pages/team.php" className="dropdown-item">NGO Ragistration</a> <a href="pages/appointment.php" className="dropdown-item">Company Ragistration</a> </div>
       </div>
-      <a href="pages/contact.php" className="nav-item nav-link">Contact</a></div>
-    <a href="https://www.free-css.com/free-css-templates" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Donate<i className="fa fa-arrow-right ms-3"></i></a></div>
+      <Link to="/Contact" className="nav-item nav-link">Contact</Link></div>
+    <Link to="/Donate" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Donate<i className="fa fa-arrow-right ms-3"></i></Link></div>
 </nav>
     </>
 }
