@@ -14,7 +14,7 @@ function Events(){
           <div className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style={{width:"65px",height:"65px"}}><i className="fa fa-heartbeat text-primary fs-4"></i></div>
           <h4 className="mb-3">Childrens</h4>
           <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-          <a className="btn" href="https://www.free-css.com/free-css-templates"><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
+          <a className="btn" ><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
       </div>
       <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style={{visibility: "visible", animationDelay: "0.3s", animationName: "fadeInUp"}}>
         <div className="service-item bg-light rounded h-100 p-5">
@@ -28,28 +28,28 @@ function Events(){
           <div className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style={{width:"65px",height:"65px"}}><i className="fa fa-brain text-primary fs-4"></i></div>
           <h4 className="mb-3">Citizens</h4>
           <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-          <a className="btn" href="https://www.free-css.com/free-css-templates"><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
+          <a className="btn" ><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
       </div>
       <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style={{visibility: "visible", animationDelay: "0.1s", animationName: "fadeInUp"}}>
         <div className="service-item bg-light rounded h-100 p-5">
           <div className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style={{width:"65px",height:"65px"}}><i className="fa fa-wheelchair text-primary fs-4"></i></div>
           <h4 className="mb-3">Needy People</h4>
           <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-          <a className="btn" href="https://www.free-css.com/free-css-templates"><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
+          <a className="btn" ><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
       </div>
       <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style={{visibility:"visible", animationDelay: "0.3s", animationName: "fadeInUp"}}>
         <div className="service-item bg-light rounded h-100 p-5">
           <div className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style={{width:"65px",height:"65px"}}><i className="fa fa-tooth text-primary fs-4"></i></div>
           <h4 className="mb-3">Cloths Need</h4>
           <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-          <a className="btn" href="https://www.free-css.com/free-css-templates"><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
+          <a className="btn"><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
       </div>
       <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style={{visibility: "visible", animationDelay: "0.5s", animationName: "fadeInUp"}}>
         <div className="service-item bg-light rounded h-100 p-5">
           <div className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style={{width:"65px", height:"65px"}}><i className="fa fa-vials text-primary fs-4"></i></div>
           <h4 className="mb-3">Earn Money</h4>
           <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-          <a className="btn" href="https://www.free-css.com/free-css-templates"><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
+          <a className="btn" ><i className="fa fa-plus text-primary me-3"></i>Read More</a></div>
       </div>
     </div>
   </div>
@@ -105,7 +105,7 @@ function Events(){
         </div>
       </div>
       <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style={{minHeight: "400px", visibility: "visible", animationDelay: "0.5s", animationName: "fadeIn"}}>
-        <div class="position-relative h-100"><img class="position-absolute img-fluid w-100 h-100" src="assets/img/feature.jpg" style={{objectFit:"cover"}} alt="website template image"/></div>
+        <div class="position-relative h-100"><img class="position-absolute img-fluid w-100 h-100" src="../Image/cause-6.jpg" style={{objectFit:"cover"}} alt="website template image"/></div>
       </div>
     </div>
   </div>

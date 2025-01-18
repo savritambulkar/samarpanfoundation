@@ -8,7 +8,7 @@ import RegisterVol from "./components/RegisterVol";
 import About from "./About";
 import Service from "./Service";
 import Contact from "./Contact";
-import Login from "./components/Login";
+import './index.css';
 function App(){
     return <>
     <Header/>
@@ -16,6 +16,9 @@ function App(){
         <Route path="" element={<Home/>}></Route>
         <Route path="About" element={<About/>}></Route>
         <Route path="Service" element={<Service/>}></Route>
+        <Route path="RegisterCom" element={<RegisterCom/>}></Route>
+        <Route path="RegisterVol" element={<RegisterVol/>}></Route>
+        <Route path="RegisterNgo" element={<RegisterNgo/>}></Route>
         <Route path="Contact" element={<Contact/>}></Route>
         <Route path="RegisterCom" element={<RegisterCom/>}></Route>
         <Route path="RegisterNgo" element={<RegisterNgo/>}></Route>
@@ -26,4 +29,4 @@ function App(){
     </>
 }
 
-export default App ;
+export default App ;//react-owl-carousel
