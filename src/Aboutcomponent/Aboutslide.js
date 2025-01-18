@@ -10,8 +10,9 @@ function Aboutslide() {
         className="container-fluid page-header py-5 mb-5 wow fadeIn"
         data-wow-delay="0.1s"
         style={{
-          backgroundImage: "url(../Image/image_3.jpg)",
+          backgroundImage: "url(../Image/photo10.jpg)",
           backgroundSize: "cover",
+          object:"fit",
           backgroundPosition: "center",
           height: "400px",
         }}

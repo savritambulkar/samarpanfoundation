@@ -1,0 +1,26 @@
+/* Add this to your CSS file */
+.team-item {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .team-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .team-text {
+    transition: background-color 0.3s ease;
+  }
+  
+  .team-item:hover .team-text {
+    background-color: #f8f9fa;
+  }
+  
+  .team-social .btn {
+    transition: transform 0.3s ease;
+  }
+  
+  .team-social .btn:hover {
+    transform: scale(1.1);
+  }
+  

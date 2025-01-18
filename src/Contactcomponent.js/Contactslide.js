@@ -2,7 +2,7 @@
 function Contactslide(){
   
     return <>
-       <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style={{visibility: "visible" ,animationDelay: "0.1s", animationName: "fadeIn" ,backgroundImage:'url(../Image/image_3.jpg)',backgroundSize:"cover", backgroundPosition:"center",height:"400px"}}>
+       <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style={{visibility: "visible" ,animationDelay: "0.1s", animationName: "fadeIn" ,backgroundImage:'url(../Image/photo08.jpg)',backgroundSize:"cover", backgroundPosition:"center",height:"400px"}}>
   <div className="container py-5">
     <h1 className="display-3 text-white mb-3  slideInDown">Contact Us</h1>
     <nav aria-label="breadcrumb animated slideInDown">
