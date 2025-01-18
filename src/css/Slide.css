@@ -1,0 +1,100 @@
+Carousel Wrapper
+.owl-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+  }
+  
+  .owl-carousel .owl-stage {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    margin-left: 300px;
+  }
+  
+  .owl-carousel-item {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+    
+  }
+  
+  .owl-carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+       
+  }
+  
+   /* Carousel Navigation Buttons  */
+  .owl-nav {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .owl-nav .owl-prev,
+  .owl-nav .owl-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .owl-nav .owl-prev:hover,
+  .owl-nav .owl-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+   /* Carousel Dots  */
+  .owl-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+  
+  .owl-dots .owl-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .owl-dots .owl-dot.active {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+
+   .owl-nav .owl-prev,
+.owl-nav .owl-next {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-nav .owl-prev i,
+.owl-nav .owl-next i {
+  font-size: 20px;
+  color: #007bff;
+}

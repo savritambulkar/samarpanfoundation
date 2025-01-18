@@ -3,7 +3,7 @@ function Serviceslide(){
     return <>
       
 
-    <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style={{visibility: "visible", animationDelay: "0.1s"  ,animationName: "fadeIn"}}>
+    <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style={{visibility: "visible", animationDelay: "0.1s"  ,animationName: "fadeIn",backgroundImage:'url(../Image/image_3.jpg)',backgroundSize:"cover", backgroundPosition:"center",height:"400px"}}>
   <div className="container py-5">
     <h1 className="display-3 text-white mb-3 animated slideInDown">Service</h1>
     <nav aria-label="breadcrumb animated slideInDown">
@@ -23,7 +23,7 @@ function Serviceslide(){
   <div className="container">
     <div className="row g-5">
       <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style={{visibility: "visible", animationDelay:"0.1s", animationName: "fadeIn"}}>
-        <div className="d-flex flex-column"><img className="img-fluid rounded w-75 align-self-end" src="../assets/img/about-1.jpg" alt="website template image"/> <img className="img-fluid rounded w-50 bg-white pt-3 pe-3" src="../assets/img/about-2.jpg" alt="website template image" style={{marginTop:"25%"}}/></div>
+        <div className="d-flex flex-column"><img className="img-fluid rounded w-75 align-self-end" src="../Image/image_1.jpg" alt="website template image"/> <img className="img-fluid rounded w-70 bg-white pt-3 pe-3" src="../Image/image_1.jpg" alt="website template image" style={{marginTop:"-25%"}}/></div>
       </div>
       <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style={{visibility: "visible", animationDelay: "0.5s", animationName: "fadeIn"}}>
         <p className="d-inline-block border rounded-pill py-1 px-4">About Us</p>
