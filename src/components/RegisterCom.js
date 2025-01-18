@@ -1,8 +1,15 @@
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
+import { setUser } from "../redux-config/UserSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import APIs from "../../src/apis/APIs"
 
 function RegisterCom() {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [ngoData, setNgoData] = useState({});
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -16,7 +23,9 @@ function RegisterCom() {
 
     try {
       let response = await axios.post(APIs.Register_Com, newVol);
-      console.log(response.message);
+      console.log(response.data);
+      dispatch(setUser(response.data));
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -28,19 +37,19 @@ function RegisterCom() {
   const ComRegId = useRef();
 
   const makeNgoObj = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const newVol = {
       email: ComEmail.current.value,
       password: ComPass.current.value,
       companyName: ComName.current.value,
-      companyRegId : ComRegId.current.value
+      companyRegId: ComRegId.current.value
     };
     sendData(newVol);
   };
 
-//   const handleFileChange = (e) => {
-//     setSelectedFile(e.target.files[0]);
-//   };
+  //   const handleFileChange = (e) => {
+  //     setSelectedFile(e.target.files[0]);
+  //   };
 
   return (
     <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px', border: '1px solid #ccc', borderRadius: '10px' }}>

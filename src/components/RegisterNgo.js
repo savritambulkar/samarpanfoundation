@@ -1,9 +1,15 @@
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import APIs from "../../src/apis/APIs";
+import { useDispatch } from "react-redux";
+import { setUser } from "../redux-config/UserSlice";
 
 function NgoRegister() {
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [ngoData, setNgoData] = useState({});
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -23,14 +29,17 @@ function NgoRegister() {
       });
       if(response){
           console.log(response.data.message);
-        return <Navigate to={APIs.Get_Ngo_List}/>
+          dispatch(setUser(response.data));
+          navigate("/")
       }
       else{
         console.log("No response found");
+        window.alert("NO Response Found");
         
       }
     } catch (err) {
       console.log(err);
+      window.alert("Sign Up Failed");
     }
   };
 

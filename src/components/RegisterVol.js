@@ -1,9 +1,15 @@
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import APIs from "../../src/apis/APIs";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setUser } from "../redux-config/UserSlice";
 
 
 function RegisterVol() {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [volData, setVolData] = useState({});
 
@@ -11,9 +17,10 @@ function RegisterVol() {
 
         try {
             let response = await axios.post(APIs.Register_Vol, newVol);
-            // console.log("response got");
-            
-            // console.log(response.data.message);
+            console.log(response);            
+            console.log(response.data.message);
+            dispatch(setUser(response.data));
+            navigate("/");
         } catch (err) {
             console.log(err);
         }
@@ -24,7 +31,8 @@ function RegisterVol() {
     const VolPass = useRef();
     const VolEmail = useRef();
 
-    const makeVolObj = async () => {
+    const makeVolObj = async (e) => {
+        e.preventDefault();
         const newNGO = {
             email: VolEmail.current.value,
             password: VolPass.current.value,
