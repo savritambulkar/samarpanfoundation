@@ -11,7 +11,7 @@ function Aboutcompany(){
     <div class="row g-4">
       <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style={{visibility: "visible", animationDelay: "0.1s", animationName: "fadeInUp"}}>
         <div class="team-item position-relative rounded overflow-hidden">
-          <div class="overflow-hidden"><img class="img-fluid" src="../Image/event-1.jpg" alt="website template image"/></div>
+          <div class="overflow-hidden"><img class="img-fluid" src="../Image/photo15.jpg" alt="website template image"/></div>
           <div class="team-text bg-light text-center p-4">
             <h5>Company</h5>
             <p class="text-primary">Department</p>

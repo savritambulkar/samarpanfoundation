@@ -1,0 +1,21 @@
+/* Add to your CSS file */
+.testimonial-carousel .slick-slide {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 50%;
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+    background-color: rgba(255, 255, 255, 0.8); 
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color: black; 
+  }
+  

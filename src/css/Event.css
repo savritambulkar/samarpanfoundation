@@ -1,0 +1,16 @@
+@keyframes slideInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .wow {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  

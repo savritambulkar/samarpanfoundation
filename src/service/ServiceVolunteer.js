@@ -1,58 +1,141 @@
-// import '../Bootstrap/bootstrap.min.css';
-// import '../index.css';
-// import '../App.css'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import "../css/ServiceVolunteer.css"
+function ServiceVolunteer() {
+  
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true, 
+  };
 
-function ServiceVolunteer(){
-    return <>
-       <div class="container-xxl py-5">
-  <div class="container">
-    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "600px", visibility: "visible", animationDelay: "0.1s", animationName: "fadeInUp"}}>
-      <p class="d-inline-block border rounded-pill py-1 px-4">Testimonial</p>
-      <h1>What Say Our Patients!</h1>
-    </div>
-    <div class="owl-carousel testimonial-carousel wow fadeInUp owl-loaded owl-drag" data-wow-delay="0.1s" style={{visibility: "visible", animationDelay: "0.1s", animationName: "fadeInUp"}}>
-      
-      
-      
-    <div class="owl-stage-outer"><div class="owl-stage" style={{transition: "all", width: "3276px", transform: "translate3d(-1638px, 0px, 0px)"}}><div class="owl-item cloned" style={{width: "468px"}}><div class="testimonial-item text-center"><img src="assets/img/testimonial-2.jpg" alt="website template image" class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" style={{width:"100px",height:"100px"}}/>
-        <div class="testimonial-text rounded text-center p-4">
-          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-          <h5 class="mb-1">Patient Name</h5>
-          <span class="fst-italic">Profession</span></div>
-      </div></div><div class="owl-item cloned" style={{width: "468px"}}><div class="testimonial-item text-center"><img src="assets/img/testimonial-3.jpg" alt="website template image" class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" style={{width:"100px",height:"100px"}}/>
-        <div class="testimonial-text rounded text-center p-4">
-          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-          <h5 class="mb-1">Patient Name</h5>
-          <span class="fst-italic">Profession</span></div>
-      </div></div><div class="owl-item" style={{width: "468px"}}><div class="testimonial-item text-center"><img src="assets/img/testimonial-1.jpg" alt="website template image" class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" style={{width:"100px",height:"100px"}}/>
-        <div class="testimonial-text rounded text-center p-4">
-          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-          <h5 class="mb-1">Patient Name</h5>
-          <span class="fst-italic">Profession</span></div>
-      </div></div><div class="owl-item" style={{width: "468px"}}><div class="testimonial-item text-center"><img src="assets/img/testimonial-2.jpg" alt="website template image" class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" style={{width:"100px",height:"100px"}}/>
-        <div class="testimonial-text rounded text-center p-4">
-          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-          <h5 class="mb-1">Patient Name</h5>
-          <span class="fst-italic">Profession</span></div>
-      </div></div><div class="owl-item active center" style={{width: "468px"}}><div class="testimonial-item text-center"><img src="assets/img/testimonial-3.jpg" alt="website template image" class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" style={{width:"100px",height:"100px"}}/>
-        <div class="testimonial-text rounded text-center p-4">
-          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-          <h5 class="mb-1">Patient Name</h5>
-          <span class="fst-italic">Profession</span></div>
-      </div></div><div class="owl-item cloned active" style={{width: "468px"}}><div class="testimonial-item text-center"><img src="assets/img/testimonial-1.jpg" alt="website template image" class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" style={{width:"100px",height:"100px"}}/>
-        <div class="testimonial-text rounded text-center p-4">
-          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-          <h5 class="mb-1">Patient Name</h5>
-          <span class="fst-italic">Profession</span></div>
-      </div></div><div class="owl-item cloned" style={{width: "468px"}}><div class="testimonial-item text-center"><img src="assets/img/testimonial-2.jpg" alt="website template image" class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" style={{width:"100px",height:"100px"}}/>
-        <div class="testimonial-text rounded text-center p-4">
-          <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-          <h5 class="mb-1">Patient Name</h5>
-          <span class="fst-italic">Profession</span></div>
-      </div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="bi bi-arrow-left"></i></div><div class="owl-next"><i class="bi bi-arrow-right"></i></div></div><div class="owl-dots disabled"></div></div>
-  </div>
-</div>
+  return (
+    <>
+      <div className="container-xxl py-5">
+        <div className="container">
+          <div
+            className="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style={{ maxWidth: '600px', visibility: 'visible', animationDelay: '0.1s', animationName: 'fadeInUp' }}
+          >
+            {/* <p className="d-inline-block border rounded-pill py-1 px-4">Testimonial</p> */}
+            <h1>What Say Our Patients!</h1>
+          </div>
+          <Slider {...settings} className="testimonial-carousel">
+          
+            <div className="testimonial-item text-center">
+              <img
+                src="../Image/photo01.jpg"
+                alt="website template image"
+                className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+                style={{ width: '300px', height: '300px' }}
+              />
+              <div className="testimonial-text rounded text-center p-4">
+                <p>
+                  Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et
+                  amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.
+                </p>
+                <h5 className="mb-1">Patient Name</h5>
+                <span className="fst-italic">Profession</span>
+              </div>
+            </div>
+         
+            <div className="testimonial-item text-center">
+              <img
+                src="../Image/photo02.jpg"
+                alt="website template image"
+                className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+                style={{ width: '300px', height: '300px' }}
+              />
+              <div className="testimonial-text rounded text-center p-4">
+                <p>
+                  Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et
+                  amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.
+                </p>
+                <h5 className="mb-1">Patient Name</h5>
+                <span className="fst-italic">Profession</span>
+              </div>
+            </div>
+     
+            <div className="testimonial-item text-center">
+              <img
+                src="../Image/photo04.jpg"
+                alt="website template image"
+                className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+                style={{ width: '300px', height: '300px' }}
+              />
+              <div className="testimonial-text rounded text-center p-4">
+                <p>
+                  Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et
+                  amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.
+                </p>
+                <h5 className="mb-1">Patient Name</h5>
+                <span className="fst-italic">Profession</span>
+              </div>
+            </div>
+
+            <div className="testimonial-item text-center">
+              <img
+                src="../Image/photo05.jpg"
+                alt="website template image"
+                className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+                style={{ width: '300px', height: '300px' }}
+              />
+              <div className="testimonial-text rounded text-center p-4">
+                <p>
+                  Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et
+                  amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.
+                </p>
+                <h5 className="mb-1">Patient Name</h5>
+                <span className="fst-italic">Profession</span>
+              </div>
+            </div>
+
+            <div className="testimonial-item text-center">
+              <img
+                src="../Image/photo06.jpg"
+                alt="website template image"
+                className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+                style={{ width: '300px', height: '300px' }}
+              />
+              <div className="testimonial-text rounded text-center p-4">
+                <p>
+                  Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et
+                  amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.
+                </p>
+                <h5 className="mb-1">Patient Name</h5>
+                <span className="fst-italic">Profession</span>
+              </div>
+            </div>
+
+            <div className="testimonial-item text-center">
+              <img
+                src="../Image/photo07.jpg"
+                alt="website template image"
+                className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+                style={{ width: '300px', height: '300px' }}
+              />
+              <div className="testimonial-text rounded text-center p-4">
+                <p>
+                  Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et
+                  amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.
+                </p>
+                <h5 className="mb-1">Patient Name</h5>
+                <span className="fst-italic">Profession</span>
+              </div>
+            </div>
+          </Slider>
+        </div>
+      </div>
     </>
+  );
 }
 
 export default ServiceVolunteer;

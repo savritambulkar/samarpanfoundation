@@ -2,7 +2,7 @@
 function Contactslide(){
   
     return <>
-       <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style={{visibility: "visible" ,animationDelay: "0.1s", animationName: "fadeIn" ,backgroundImage:'url(../Image/photo08.jpg)',backgroundSize:"cover", backgroundPosition:"center",height:"400px"}}>
+       <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style={{visibility: "visible" ,animationDelay: "0.1s", animationName: "fadeIn" ,backgroundImage:'url(../Image/photo14.jpg)',backgroundSize:"cover", backgroundPosition:"center",height:"400px"}}>
   <div className="container py-5">
     <h1 className="display-3 text-white mb-3  slideInDown">Contact Us</h1>
     <nav aria-label="breadcrumb animated slideInDown">
@@ -86,7 +86,14 @@ function Contactslide(){
       </div>
       <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style={{visibility: "visible", animationDelay: "0.5s", animationName: "fadeIn"}}>
         <div className="h-100" style={{minHeight:"400px"}}>
-          <iframe className="rounded w-100 h-100" src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd" frameborder="0" aria-hidden="false" tabindex="0"></iframe>
+        <iframe 
+  className="rounded w-100 h-100" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11313604.840007726!2d74.55824978906646!3d23.526737947937836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39631f65aa363de1%3A0x9f6f9af679ed751d!2sMadhya%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1603794290143!5m2!1sen!2sus" 
+  frameborder="0" 
+  aria-hidden="false" 
+  tabindex="0">
+</iframe>
+
         </div>
       </div>
     </div>

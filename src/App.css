@@ -37,6 +37,11 @@
   }
 }
 
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020; /* Ensures it's above other elements */
+}
 
 
 

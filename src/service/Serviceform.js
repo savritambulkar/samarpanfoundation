@@ -7,21 +7,21 @@ function Serviceform(){
   <div className="container">
     <div className="row g-5">
       <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style={{visibility: "visible", animationDelay: "0.1s", animationName: "fadeInUp"}}>
-        <p className="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
+        {/* <p className="d-inline-block border rounded-pill py-1 px-4">Appointment</p> */}
         <h1 className="mb-4">Make An Appointment To Visit Our Doctor</h1>
         <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
         <div className="bg-light rounded d-flex align-items-center p-5 mb-4">
           <div className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style={{width:"55px",height:"55px"}}><i className="fa fa-phone-alt text-primary"></i></div>
           <div className="ms-4">
             <p className="mb-2">Call Us Now</p>
-            <h5 className="mb-0">+012 345 6789</h5>
+            <h5 className="mb-0">9171188434</h5>
           </div>
         </div>
         <div className="bg-light rounded d-flex align-items-center p-5">
           <div className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style={{width:"55px",height:"55px"}}><i className="fa fa-envelope-open text-primary"></i></div>
           <div className="ms-4">
             <p className="mb-2">Mail Us Now</p>
-            <h5 className="mb-0">name@domain.com</h5>
+            <h5 className="mb-0">infoSamarpan@gmail.com</h5>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ function Serviceform(){
               </div>
               <div className="col-12 col-sm-6">
                 <select className="form-select border-0" style={{height:"55px"}}>
-                  <option selected="">Choose Doctor</option>
+                  <option selected="">Choose </option>
                   <option value="1">Doctor 1</option>
                   <option value="2">Doctor 2</option>
                   <option value="3">Doctor 3</option>

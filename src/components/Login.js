@@ -1,94 +1,163 @@
 import axios from "axios";
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
+import { setUser } from "../redux-config/UserSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import APIs from "../../src/apis/APIs";
 
-function Login(){
-    const [volData, setVolData] = useState({});
+function Login() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-const sendData = async (newVol) => {
-
+  const sendData = async (user) => {
     try {
-        let response = await axios.post(APIs.Register_Vol, newVol);
-        // console.log("response got");
-        
-        // console.log(response.data.message);
+      let response = await axios.post(APIs.User_Log_In, user);
+      console.log(response.data);
+      dispatch(setUser(response.data));
+      navigate("/");
     } catch (err) {
-        console.log(err);
+      console.log(err);
     }
-};
+  };
 
+  const ComEmail = useRef();
+  const ComPass = useRef();
+  const UserType = useRef();
 
-const VolName = useRef();
-const VolPass = useRef();
-const VolEmail = useRef();
-
-const makeVolObj = async () => {
-    const newNGO = {
-        email: VolEmail.current.value,
-        password: VolPass.current.value,
-        volunteerName: VolName.current.value,
+  const makeNgoObj = async (e) => {
+    e.preventDefault();
+    const newVol = {
+      email: ComEmail.current.value,
+      password: ComPass.current.value,
     };
-    sendData(newNGO);
-};
+    sendData(newVol);
+  };
 
+  return <>
+  <h1 style={{ color: "black", marginBottom: "10px", textAlign:"center" }}>
+          Welcome Back!
+        </h1>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+        backgroundColor: "#f8f9fa",
+        padding: "20px",
+      }}
+    >
+      {/* Left Side: Image and Content */}
+      <div
+        style={{
+          flex: 1,
+          backgroundImage: "url(../Image/photo11.jpg)", // Replace with your image pathx
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          borderRadius: "10px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          height:"450px",
+          padding: "20px",
+          maxWidth: "700px",
+        }}
+      >
+        
+        
+      </div>
 
-    return <>
-    <div>
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px', border: '1px solid #ccc', borderRadius: '10px'}}>
-        <h2 style={{textAlign:"center"}}>Login Here</h2>
+      {/* Right Side: Login Form */}
+      <div
+        style={{
+          flex: 1,
+          maxWidth: "700px",
+          padding: "20px",
+          border: "1px solid #ccc",
+          borderRadius: "10px",
+          backgroundColor: "#fff",
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+          marginLeft: "10px",
+          height:"450px"
+        }}
+      >
+       
+        <form onSubmit={makeNgoObj}>
+          <div style={{ marginBottom: "15px" }}>
+            <label htmlFor="email">Email:</label>
+            <br />
+            <input
+              ref={ComEmail}
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"
+              style={{
+                width: "100%",
+                padding: "10px",
+                borderRadius: "5px",
+                border: "1px solid #ccc",
+              }}
+            />
+          </div>
 
-        <form onSubmit={makeVolObj}>
-            <div style={{ marginBottom: '15px' }}>
-                <label htmlFor="name">Name:</label><br />
-                <input
-                    ref={VolName}
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter Name"
-                    style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
-                />
-            </div>
-            <div style={{ marginBottom: '15px' }}>
-                <label htmlFor="email">Email:</label><br />
-                <input
-                    ref={VolEmail}
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter Email"
-                    style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
-                />
-            </div>
-            
-            <div style={{ marginBottom: '15px' }}>
-                <label htmlFor="password">Password:</label><br />
-                <input
-                    ref={VolPass}
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Enter Password"
-                    style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
-                />
-            </div>
-            
-            <div style={{ marginBottom: '15px' }}>
-                <label htmlFor="address">Address:</label><br />
-                <textarea
-                    id="address"
-                    name="address"
-                    style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
-                ></textarea>
-            </div>
-            <button type="submit" style={{ padding: '10px 20px', borderRadius: '5px', border: 'none', background: '#007BFF', color: '#fff' , marginLeft:"230px"}}>
-                Submit
-            </button>
+          <div style={{ marginBottom: "15px" }}>
+            <label htmlFor="type">Type:</label>
+            <br />
+            <select
+              ref={UserType}
+              name="type"
+              style={{
+                width: "100%",
+                padding: "10px",
+                borderRadius: "5px",
+                border: "1px solid #ccc",
+              }}
+            >
+              <option>Select User Type</option>
+              <option value="Volunteer">Volunteer</option>
+              <option value="Company">Company</option>
+              <option value="Ngo">NGO</option>
+            </select>
+          </div>
+
+          <div style={{ marginBottom: "15px" }}>
+            <label htmlFor="password">Password:</label>
+            <br />
+            <input
+              ref={ComPass}
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter Password"
+              style={{
+                width: "100%",
+                padding: "10px",
+                borderRadius: "5px",
+                border: "1px solid #ccc",
+              }}
+            />
+          </div>
+
+          <button
+            type="submit"
+            style={{
+              padding: "10px 20px",
+              borderRadius: "5px",
+              border: "none",
+              background: "#007BFF",
+              color: "#fff",
+              cursor: "pointer",
+            }}
+          >
+            Submit
+          </button>
         </form>
+      </div>
     </div>
-    </div>
-
-    </>
+  </>
 }
 
-export default Login ;
+export default Login;
