@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Auth({children}){
+   const navigate = useNavigate();
    const {isLoggedIn} = useSelector((store)=>store.User);
    if(isLoggedIn)
     return children;
-   return <Navigate to="Login"/>
+   navigate("Login");
 }
 
 export default Auth;

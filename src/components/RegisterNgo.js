@@ -22,6 +22,8 @@ function NgoRegister() {
     formData.append('Type', newNGO.Type);
 
     try {
+      console.log(formData);
+      
       let response = await axios.post(APIs.Register_Ngo, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -30,6 +32,7 @@ function NgoRegister() {
       if(response){
           console.log(response.data.message);
           dispatch(setUser(response.data));
+          window.alert("Registration Successful");
           navigate("/")
       }
       else{
