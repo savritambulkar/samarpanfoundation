@@ -6,7 +6,7 @@ function About(){
     return <>
 
      <Aboutslide/> 
-     <Company/>
+     {/* <Company/> */}
  
  
     </>

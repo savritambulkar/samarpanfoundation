@@ -10,13 +10,15 @@ import Service from "./Service";
 import Contact from "./Contact";
 import './index.css';
 import Login from "./components/Login";
+import CompanyList from "./components/CompanyList";
+import NgoList from "./components/NgoList";
 function App(){
     return <>
     <Header/>
     <Routes>
         <Route path="" element={<Home/>}></Route>
         <Route path="About" element={<About/>}></Route>
-        <Route path="Service" element={<Service/>}></Route>
+        <Route path="Collaborations" element={<Service/>}></Route>
         <Route path="RegisterCom" element={<RegisterCom/>}></Route>
         <Route path="RegisterVol" element={<RegisterVol/>}></Route>
         <Route path="RegisterNgo" element={<RegisterNgo/>}></Route>
@@ -25,9 +27,11 @@ function App(){
         <Route path="RegisterNgo" element={<RegisterNgo/>}></Route>
         <Route path="RegisterVol" element={<RegisterVol/>}></Route>
         <Route path="Login" element={<Login/>}></Route>
+        <Route path="CompanyList" element={<CompanyList/>}></Route>
+        <Route path="NgoList" element={<NgoList/>}></Route>
     </Routes>
     <Footer/>
     </>
 }
 
-export default App ;//react-owl-carousel
+export default App ;

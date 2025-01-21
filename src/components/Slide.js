@@ -7,7 +7,7 @@ const Slide = () => {
   const sliderSettings = {
      dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1500,
    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
@@ -43,10 +43,10 @@ const Slide = () => {
                   alt="Slide 1"
                   className="img-fluid rounded"
                 />
-                <div className="carousel-caption">
+                {/* <div className="carousel-caption">
                   <h3>Cardiology</h3>
                   <p>Advanced care for your heart and health.</p>
-                </div>
+                </div> */}
               </div>
             </div>
             <div>
@@ -56,10 +56,10 @@ const Slide = () => {
                   alt="Slide 2"
                   className="img-fluid rounded"
                 />
-                <div className="carousel-caption">
+                {/* <div className="carousel-caption">
                   <h3>Neurology</h3>
                   <p>Expert neurological treatments and support.</p>
-                </div>
+                </div> */}
               </div>
             </div>
             <div>
@@ -69,10 +69,10 @@ const Slide = () => {
                   alt="Slide 3"
                   className="img-fluid rounded"
                 />
-                <div className="carousel-caption">
+                {/* <div className="carousel-caption">
                   <h3>Pulmonary</h3>
                   <p>Comprehensive care for respiratory health.</p>
-                </div>
+                </div> */}
               </div>
             </div>
             <div>
@@ -82,10 +82,10 @@ const Slide = () => {
                   alt="Slide 3"
                   className="img-fluid rounded"
                 />
-                <div className="carousel-caption">
+                {/* <div className="carousel-caption">
                   <h3>Pulmonary</h3>
                   <p>Comprehensive care for respiratory health.</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </Slider>
