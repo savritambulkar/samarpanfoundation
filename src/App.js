@@ -12,12 +12,14 @@ import './index.css';
 import Login from "./components/Login";
 import CompanyList from "./components/CompanyList";
 import NgoList from "./components/NgoList";
+import CompanyDetail from "./components/CompanyDetail";
 function App(){
     return <>
     <Header/>
     <Routes>
         <Route path="" element={<Home/>}></Route>
         <Route path="About" element={<About/>}></Route>
+        <Route path="comDetail/:_id" element={<CompanyDetail/>}></Route>
         <Route path="Collaborations" element={<Service/>}></Route>
         <Route path="RegisterCom" element={<RegisterCom/>}></Route>
         <Route path="RegisterVol" element={<RegisterVol/>}></Route>

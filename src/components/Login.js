@@ -14,6 +14,7 @@ function Login() {
       let response = await axios.post(APIs.User_Log_In, user);
       console.log(response.data);
       dispatch(setUser(response.data));
+      window.alert("Login Successful");
       navigate("/");
     } catch (err) {
       console.log(err);
@@ -29,6 +30,7 @@ function Login() {
     const newVol = {
       email: ComEmail.current.value,
       password: ComPass.current.value,
+      UserType:UserType.current.value
     };
     sendData(newVol);
   };
@@ -117,7 +119,7 @@ function Login() {
               }}
             >
               <option>Select User Type</option>
-              <option value="Volunteer">Volunteer</option>
+              {/* <option value="Volunteer">Volunteer</option> */}
               <option value="Company">Company</option>
               <option value="Ngo">NGO</option>
             </select>

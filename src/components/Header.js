@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { signOut } from "../redux-config/UserSlice";
 
 function Header() {
+    const {isLoggedIn , type} = useSelector((store)=>store.user);
+    const dispatch = useDispatch();
+    // console.log("in header..............");
+    // console.log(type);
+    // console.log("in header..............");
+
+
+
+
+
     return (
         <>
             <div className="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
@@ -63,20 +75,30 @@ function Header() {
                         <Link to="/About" className="nav-item nav-link">
                             About
                         </Link>
-                        <Link to="/Collaborations" className="nav-item nav-link">
-                            Collaborations
-                        </Link>
                         <Link to="/Contact" className="nav-item nav-link">
                             Contact
                         </Link>
-                        <div className="nav-item dropdown">
+                        {(isLoggedIn) &&<Link to="/Collaborations" className="nav-item nav-link">
+                            Collaborations
+                        </Link>}
+                        {(isLoggedIn)&& type == "Company" && <Link to="/NgoList" className="nav-item nav-link">
+                            NGOs
+                        </Link>}
+                        {(isLoggedIn)&& type == "Ngo" && <Link to="/CompanyList" className="nav-item nav-link">
+                            Companies
+                        </Link>}
+                        
+                        {(isLoggedIn) &&<Link onClick={()=> {window.alert("Logging you out"); dispatch(signOut())}} className="nav-item nav-link">
+                            Log Out
+                        </Link>}
+                        {(!isLoggedIn) &&<div className="nav-item dropdown">
                             <Link to="/Service" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                                 Get Involve
                             </Link>
                             <div className="dropdown-menu rounded-0 rounded-bottom m-0">
-                                <Link className="dropdown-item" to={"RegisterVol"}>
+                                {/* <Link className="dropdown-item" to={"RegisterVol"}>
                                     Volunteer Registration
-                                </Link>
+                                </Link> */}
                                 <Link className="dropdown-item" to={"RegisterNgo"}>
                                     NGO Registration
                                 </Link>
@@ -84,10 +106,10 @@ function Header() {
                                     Company Registration
                                 </Link>
                             </div>
-                        </div>
-                        <Link to="/Login" className="nav-item nav-link">
+                        </div>}
+                        {(!isLoggedIn) &&<Link to="/Login" className="nav-item nav-link">
                             LogIn
-                        </Link>
+                        </Link>}
                     </div>
                     <Link className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">
                         DONATE

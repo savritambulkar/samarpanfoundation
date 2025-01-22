@@ -20,26 +20,25 @@ function NgoRegister() {
     formData.append("Type", newNGO.Type);
 
     try {
-      console.log(formData);
-      
+      // console.log(formData);
       let response = await axios.post(APIs.Register_Ngo, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
       if(response){
-          console.log(response.data.message);
+          // console.log(response.data.message);
           dispatch(setUser(response.data));
           window.alert("Registration Successful");
           navigate("/")
       }
       else{
         console.log("No response found");
-        alert("No response found");
+        window.alert("No response found");
       }
     } catch (err) {
       console.log(err);
-      alert("Sign Up Failed");
+      window.alert("Sign Up Failed");
     }
   };
 
