@@ -42,7 +42,7 @@ function Contactslide(){
           <div className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style={{width:"55px",height:"55px"}}><i className="fa fa-envelope-open text-primary"></i></div>
           <div className="ms-4">
             <p className="mb-2">Mail Us Now</p>
-            <h5 className="mb-0">name@domain.com</h5>
+            <h5 className="mb-0">infoSamarpan@gmail.com</h5>
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@ function Contactslide(){
         <div className="bg-light rounded p-5">
           <p className="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
           <h1 className="mb-4">Have Any Query? Please Contact Us!</h1>
-          <p className="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax &amp; PHP in a few minutes. Just copy and paste the files, add a little code and you're done. Download Now.</p>
+          {/* <p className="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax &amp; PHP in a few minutes. Just copy and paste the files, add a little code and you're done. Download Now.</p> */}
           <form action="#" method="post">
             <div className="row g-3">
               <div className="col-md-6">
@@ -67,8 +67,8 @@ function Contactslide(){
               </div>
               <div className="col-12">
                 <div className="form-floating">
-                  <input type="text" className="form-control" id="subject" placeholder="Subject"/>
-                  <label for="subject">Subject</label>
+                  <input type="text" className="form-control" id="subject" placeholder="Query"/>
+                  <label for="Query">Subject</label>
                 </div>
               </div>
               <div className="col-12">
@@ -86,14 +86,24 @@ function Contactslide(){
       </div>
       <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style={{visibility: "visible", animationDelay: "0.5s", animationName: "fadeIn"}}>
         <div className="h-100" style={{minHeight:"400px"}}>
-        <iframe 
-  className="rounded w-100 h-100" 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11313604.840007726!2d74.55824978906646!3d23.526737947937836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39631f65aa363de1%3A0x9f6f9af679ed751d!2sMadhya%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1603794290143!5m2!1sen!2sus" 
+        {/* <iframe 
+  class="rounded w-100 h-100" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.5615834118335!2d75.8644501153661!3d22.71845398511578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fdc74f5a5b5d%3A0x8b285eb6e6ef6825!2sJawahar%20Marg%2C%20Madhovastika%2C%20Indore%2C%20Madhya%20Pradesh%20452007%2C%20India!5e0!3m2!1sen!2sus!4v1613794290143!5m2!1sen!2sus" 
   frameborder="0" 
   aria-hidden="false" 
   tabindex="0">
-</iframe>
+</iframe> */}
 
+<iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.3491597289244!2d75.84150500925682!3d22.71526007930438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd7a637fc527%3A0xa641f102ba5de184!2sMadhavastika%20InfoBeans%20Foundation!5e0!3m2!1sen!2sus!4v1737522959819!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style={{ border: '0' }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Google Maps Embed"
+      ></iframe>
         </div>
       </div>
     </div>

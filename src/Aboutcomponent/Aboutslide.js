@@ -79,30 +79,26 @@ function Aboutslide() {
                 About Us
               </p> */}
               <h1 className="mb-4">
-                Why You Should Trust Us? Get to Know About Us!
+                Why You Should Trust Us? 
               </h1>
               <p>
-                We offer the best healthcare solutions with a team of
-                experienced professionals, state-of-the-art equipment, and a
-                dedication to excellence.
+              Our mission is to connect those who need help with those who can provide it. By fostering collaboration between NGOs, companies, and volunteers, we are building a network of support and creating meaningful impact.
               </p>
-              <p className="mb-4">
-                Our mission is to provide exceptional services tailored to meet
-                your needs and ensure positive health outcomes.
+              <p className="mb-4">"We are a purpose-driven platform dedicated to building a bridge between those who want to make a difference and those who need support. Our goal is to empower NGOs by connecting them with the resources, funding, and partnerships they require to amplify their impact. At the same time, we provide companies with meaningful opportunities to fulfill their social responsibility goals and volunteers with a chance to actively contribute to causes they believe in. By fostering collaboration, transparency, and shared purpose, we are working to create a global network of support that drives positive change in communities worldwide."
               </p>
               <ul className="list-unstyled">
                 <li className="mb-2">
                   <i className="far fa-check-circle text-primary me-3"></i>
-                  Quality health care
+                  Empowering NGOs
                 </li>
                 <li className="mb-2">
                   <i className="far fa-check-circle text-primary me-3"></i>
-                  Only Qualified Doctors
+                  Engaging Companies
                 </li>
-                <li>
+                {/* <li>
                   <i className="far fa-check-circle text-primary me-3"></i>
-                  Medical Research Professionals
-                </li>
+                  
+                </li> */}
               </ul>
               <a
                 className="btn btn-primary rounded-pill py-3 px-5 mt-3"
@@ -128,10 +124,9 @@ function Aboutslide() {
                 {/* <p className="d-inline-block border rounded-pill text-light py-1 px-4">
                   Features
                 </p> */}
-                <h1 className="text-white mb-4">Why Choose Us</h1>
+                <h1 className="text-white mb-4">Why Partner With Us?</h1>
                 <p className="text-white mb-4 pb-2">
-                  We combine experience, quality services, and advanced
-                  technology to deliver unparalleled healthcare solutions.
+                We bring people together to make the world a better place. By connecting NGOs, companies, and volunteers, we create opportunities for impactful collaborations.
                 </p>
                 <div className="row g-4">
                   <div className="col-6">
