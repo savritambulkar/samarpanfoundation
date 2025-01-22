@@ -24,12 +24,12 @@ function Events() {
           <div className="row g-4">
             {/* Service Items */}
             {[
-              { icon: "fa-heartbeat", title: "Childrens", text: "Support and care for children." },
-              { icon: "fa-x-ray", title: "Food", text: "Providing meals to the needy." },
-              { icon: "fa-brain", title: "Citizens", text: "Empowering citizens for better living." },
-              { icon: "fa-wheelchair", title: "Needy People", text: "Aid for underprivileged individuals." },
-              { icon: "fa-tooth", title: "Cloth Needs", text: "Clothing distribution campaigns." },
-              { icon: "fa-vials", title: "Earn Money", text: "Helping individuals earn and sustain." },
+              { icon: "fa-solid fa-children", title: "Childrens", text: "Support and care for children." },
+              { icon: "fa-solid fa-bowl-food", title: "Food", text: "Providing meals to the needy." },
+              { icon: "fa-solid fa-people-group", title: "Citizens", text: "Empowering citizens for better living." },
+              { icon: "fa-heartbeat", title: "Needy People", text: "Support for underprivileged individuals." },
+              { icon: "fa-solid fa-shirt", title: "Cloth Needs", text: "Clothing distribution campaigns." },
+              { icon: "fa-solid fa-indian-rupee-sign", title: "Earn Money", text: "Helping individuals earn and sustain." },
             ].map((service, index) => (
               <div
                 className="col-lg-4 col-md-6 wow fadeInUp"
@@ -76,16 +76,15 @@ function Events() {
                 <p className="d-inline-block border rounded-pill text-light py-1 px-4">
                   Features
                 </p>
-                <h1 className="text-white mb-4">Why Choose Samarpan</h1>
+                <h1 className="text-white mb-4">Together,we create changes</h1>
                 <p className="text-white mb-4 pb-2">
-                  Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                  Aliqu diam amet diam et eos.
+                 MISSON, VISION, IMPACT
                 </p>
                 <div className="row g-4">
                   {[
-                    { icon: "fa-user-md", title: "Help", text: "Experience" },
-                    { icon: "fa-check", title: "Services", text: "Quality" },
-                    { icon: "fa-comment-medical", title: "Consultation", text: "Positive" },
+                    { icon: "fa-solid fa-handshake-simple", title: "Impactful callobration", text: "Misson" },
+                    { icon: "fa-solid fa-eye", title: "Contribution leads to a brighter future", text: "Vision"  },
+                    { icon: "fa-comment-medical", title: "Bridges the gap between needy and Supporters", text: "Impact" },
                     { icon: "fa-headphones", title: "Support", text: "24 Hours" },
                   ].map((feature, index) => (
                     <div className="col-6" key={feature.title}>

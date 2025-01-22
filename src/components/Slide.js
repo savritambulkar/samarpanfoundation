@@ -20,15 +20,15 @@ const Slide = () => {
       <div className="row align-items-center">
         {/* Left Side Content */}
         <div className="col-md-6">
-          <h1 className="mb-4" style={{fontSize:"60px", color:"white"}}>Good Health Is The Root Of All Heppiness</h1>
+          <h1 className="mb-4" style={{fontSize:"60px", color:"white"}}>Nurturing Hope, Changing Futures</h1>
           <p className="mb-4">
-            Good health is the foundation of a happy and fulfilling life. At our clinic, we provide
-            exceptional healthcare services delivered by experienced professionals.
+          "Hope starts here – join us in making a difference".
+            Your small help can changes someone future
           </p>
           <ul className="mb-4">
-            <li>Highly Qualified Doctors</li>
-            <li>Advanced Medical Equipment</li>
-            <li>24/7 Emergency Services</li>
+            <li>Empowering NGOs with Work and Resources </li>
+            <li>Connecting Companies with Trusted Causes</li>
+            <li>Enabling Human to Make a Difference</li>
           </ul>
          
         </div>
