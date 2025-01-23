@@ -21,6 +21,7 @@ function RegisterCom() {
     formData.append("password", newCom.password);
     formData.append("companyName", newCom.companyName);
     formData.append("companyRegId", newCom.companyRegId);
+    formData.append("companyDesc", newCom.companyDesc);
     try {
       // console.log(formData);
       let response = await axios.post(APIs.Register_Com, formData, {
@@ -47,6 +48,7 @@ function RegisterCom() {
   const ComPass = useRef();
   const ComEmail = useRef();
   const ComRegId = useRef();
+  const ComDesc = useRef();
 
   const makeComObj = async (e) => {
     e.preventDefault();
@@ -55,6 +57,7 @@ function RegisterCom() {
       password: ComPass.current.value,
       companyName: ComName.current.value,
       companyRegId: ComRegId.current.value,
+      companyDesc: ComDesc.current.value,
     };
     sendData(newCom);
   };
@@ -189,12 +192,13 @@ function RegisterCom() {
             />
           </div>
           <div style={{ marginBottom: "15px" }}>
-            <label htmlFor="address">Address:</label>
+            <label htmlFor="description">Description:</label>
             <br />
             <textarea
-              id="address"
-              name="address"
-              placeholder="Enter Address"
+              ref={ComDesc}
+              id="description"
+              name="description"
+              // placeholder="Enter Address"
               style={{
                 width: "100%",
                 padding: "10px",
@@ -218,6 +222,7 @@ function RegisterCom() {
           </button>
         </form>
       </div>
+      
     </div>
  </>
 }

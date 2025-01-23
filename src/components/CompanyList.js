@@ -40,7 +40,7 @@ function CompanyList(){
             animationName: "fadeInUp",
           }}
         >
-          <h1>Associate Company</h1>
+          <h1>Companies</h1>
          
         </div>
 
@@ -81,7 +81,7 @@ function CompanyList(){
                   />
                 </div>
                 <div className="team-text bg-light text-center p-4">
-                  <h5>{com.companyName}</h5>
+                  <h5 className="mt-3">{com.companyName}</h5>
                  
                   <div className="team-social text-center">
                     {/* <a className="btn btn-square" href="#">

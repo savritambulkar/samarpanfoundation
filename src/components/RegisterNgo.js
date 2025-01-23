@@ -18,6 +18,7 @@ function NgoRegister() {
     formData.append("password", newNGO.password);
     formData.append("NGOName", newNGO.NGOName);
     formData.append("Type", newNGO.Type);
+    formData.append("NgoDesc", newNGO.NgoDesc);
 
     try {
       // console.log(formData);
@@ -46,6 +47,7 @@ function NgoRegister() {
   const NgoPass = useRef();
   const NgoEmail = useRef();
   const NgoType = useRef();
+  const NgoDesc = useRef();
 
   const makeNgoObj = async (e) => {
     e.preventDefault();
@@ -54,6 +56,7 @@ function NgoRegister() {
       password: NgoPass.current.value,
       NGOName: NgoName.current.value,
       Type: NgoType.current.value,
+      NgoDesc:NgoDesc.current.value
     };
     sendData(newNGO);
   };
@@ -187,11 +190,12 @@ function NgoRegister() {
             <input type="file" name="profilePic" onChange={handleFileChange} />
           </div>
           <div style={{ marginBottom: "15px" }}>
-            <label htmlFor="address">Address:</label>
+            <label htmlFor="description">Description:</label>
             <br />
             <textarea
-              id="address"
-              name="address"
+            ref={NgoDesc}
+              id="description"
+              name="description"
               style={{
                 width: "100%",
                 padding: "10px",

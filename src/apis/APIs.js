@@ -30,8 +30,11 @@ export default {
     //Collab
     "Create_Collab_Request" : "http://localhost:1234/collab/createCollabRequest",
     "Accept_Collab_Request" : "http://localhost:1234/collab/acceptRequest",
+    "Submit_Collab_Work" : "http://localhost:1234/collab/submitCollabWork",
     "Collab_Mark_As_Done" : "http://localhost:1234/collab/markAsDone",
     "Get_Collab_List" : "http://localhost:1234/collab/getCollabList",
-    "Collab_By_Id" : "http://localhost:1234/collab/"
+    "Collab_By_Id" : "http://localhost:1234/collab/",
+    "Collab_By_Com_Id" : "http://localhost:1234/collab/byComId/",
+    "Collab_By_Ngo_Id" : "http://localhost:1234/collab/byNgoId/"
 
 }

@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "../redux-config/UserSlice";
 
 function Header() {
+    const navigate = useNavigate();
     const {isLoggedIn , type} = useSelector((store)=>store.user);
     const dispatch = useDispatch();
     // console.log("in header..............");
@@ -78,9 +79,14 @@ function Header() {
                         <Link to="/Contact" className="nav-item nav-link">
                             Contact
                         </Link>
-                        {(isLoggedIn) &&<Link to="/Collaborations" className="nav-item nav-link">
+                        {(isLoggedIn) && type == "Company" && <Link to="/CompanyCollaborations" className="nav-item nav-link">
                             Collaborations
                         </Link>}
+
+                        {(isLoggedIn) && type == "Ngo" && <Link to="/NgoCollaborations" className="nav-item nav-link">
+                            Collaborations
+                        </Link>}
+
                         {(isLoggedIn)&& type == "Company" && <Link to="/NgoList" className="nav-item nav-link">
                             NGOs
                         </Link>}
@@ -88,7 +94,7 @@ function Header() {
                             Companies
                         </Link>}
                         
-                        {(isLoggedIn) &&<Link onClick={()=> {window.alert("Logging you out"); dispatch(signOut())}} className="nav-item nav-link">
+                        {(isLoggedIn) &&<Link onClick={()=> {window.alert("Logging you out"); dispatch(signOut());}} to="/" className="nav-item nav-link">
                             Log Out
                         </Link>}
                         {(!isLoggedIn) &&<div className="nav-item dropdown">
@@ -111,7 +117,7 @@ function Header() {
                             LogIn
                         </Link>}
                     </div>
-                    <Link className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">
+                    <Link to="/donate" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">
                         DONATE
                         <i className="fa fa-arrow-right ms-3"></i>
                     </Link>

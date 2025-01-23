@@ -12,7 +12,7 @@ function Login() {
   const sendData = async (user) => {
     try {
       let response = await axios.post(APIs.User_Log_In, user);
-      console.log(response.data);
+      // console.log(response.data);
       dispatch(setUser(response.data));
       window.alert("Login Successful");
       navigate("/");

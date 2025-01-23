@@ -1,9 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useDispatch,useSelector } from "react-redux";
 import axios from "axios";
 import APIs from "../apis/APIs";
 
 const Aboutcompany = () => {
+  const {isLoggedIn , type} = useSelector((store)=>store.user);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [comList, setComList] = useState([]);
   const fourItems = comList.slice(0,4);
@@ -37,14 +40,14 @@ const Aboutcompany = () => {
           }}
         >
           <h1>Associate Company</h1>
-          <button
+          {(isLoggedIn)&& type == "Ngo" && <button
             className="btn btn-outline-primary d-inline-block border rounded-pill py-1 px-4"
             onClick={() => {
               navigate("CompanyList");
             }}
           >
             View All
-          </button>
+          </button>}
         </div>
 
         <div className="row g-4">
@@ -84,9 +87,10 @@ const Aboutcompany = () => {
                   />
                 </div>
                 <div className="team-text bg-light text-center p-4">
-                  <h5>{com.companyName}</h5>
-                  <p className="text-primary">{com.companyRegIde}</p>
-                  <div className="team-social text-center">
+                  <h5 className="mt-3">{com.companyName}</h5>
+                  {/* <p className="text-primary">{com.companyRegId}</p> */}
+                  Description
+                  <div className="team-social text-center d-flex justify-content-left align-items-center">
                     {/* <a className="btn btn-square" href="#">
                       <i className="fab fa-facebook-f"></i>
                     </a>
@@ -97,7 +101,8 @@ const Aboutcompany = () => {
                       <i className="fab fa-instagram"></i> 
                     </a>*/}
 
-                      <p>This company provides assistant in teaching poor students</p>
+                      {com.companyDesc && <p>{com.companyDesc}</p>}
+                      {!com.companyDesc && <p>No Description Available</p>}
 
                   </div>
                 </div>

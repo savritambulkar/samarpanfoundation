@@ -19,7 +19,7 @@ const Slide = () => {
     <div className="container-fluid p-5 bg-primary">
       <div className="row align-items-center">
         {/* Left Side Content */}
-        <div className="col-md-6">
+        <div className="col-md-6 text-light">
           <h1 className="mb-4" style={{fontSize:"60px", color:"white"}}>Nurturing Hope, Changing Futures</h1>
           <p className="mb-4">
           "Hope starts here – join us in making a difference".

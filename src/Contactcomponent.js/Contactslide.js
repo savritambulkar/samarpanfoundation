@@ -24,7 +24,7 @@ function Contactslide(){
           <div className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style={{width:"55px",height:"55px"}}><i className="fa fa-map-marker-alt text-primary"></i></div>
           <div className="ms-4">
             <p className="mb-2">Address</p>
-            <h5 className="mb-0">123 Street, New York, USA</h5>
+            <h5 className="mb-0">Madhovastika, Indore, Madhya Pradesh</h5>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@ function Contactslide(){
           <div className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style={{width:"55px",height:"55px"}}><i className="fa fa-phone-alt text-primary"></i></div>
           <div className="ms-4">
             <p className="mb-2">Call Us Now</p>
-            <h5 className="mb-0">+012 345 6789</h5>
+            <h5 className="mb-0">9171188434</h5>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ function Contactslide(){
 <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.3491597289244!2d75.84150500925682!3d22.71526007930438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd7a637fc527%3A0xa641f102ba5de184!2sMadhavastika%20InfoBeans%20Foundation!5e0!3m2!1sen!2sus!4v1737522959819!5m2!1sen!2sus"
         width="600"
-        height="450"
+        height="585"
         style={{ border: '0' }}
         allowFullScreen=""
         loading="lazy"
