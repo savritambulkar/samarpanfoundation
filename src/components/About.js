@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
         <p><i className="far fa-check-circle text-primary me-3"></i>Empowering NGOs</p>
         <p><i className="far fa-check-circle text-primary me-3"></i>Trusted Partnerships</p>
         <p><i className="far fa-check-circle text-primary me-3"></i>Streamlined Collaboration</p>
-        <Link className="btn btn-primary rounded-pill py-3 px-5 mt-3" to="">Read More</Link></div>
+        <Link className="btn btn-primary rounded-pill py-3 px-5 mt-3" to="/About">Read More</Link></div>
     </div>
   </div>
 </div>

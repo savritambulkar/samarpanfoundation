@@ -29,7 +29,8 @@ function App(){
         <Route path="Login" element={<Login/>}></Route>
         <Route path="CompanyList" element={<CompanyList/>}></Route>
         <Route path="NgoList" element={<NgoList/>}></Route>
-    </Routes>
+        
+        </Routes>
     <Footer/>
     </>
 }

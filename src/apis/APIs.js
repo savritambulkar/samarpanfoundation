@@ -32,6 +32,8 @@ export default {
     "Accept_Collab_Request" : "http://localhost:1234/collab/acceptRequest",
     "Collab_Mark_As_Done" : "http://localhost:1234/collab/markAsDone",
     "Get_Collab_List" : "http://localhost:1234/collab/getCollabList",
-    "Collab_By_Id" : "http://localhost:1234/collab/"
+    "Collab_By_Id" : "http://localhost:1234/collab/",
 
+    //contect
+    "get_query" : "http://localhost:1234/Query/Query"
 }
