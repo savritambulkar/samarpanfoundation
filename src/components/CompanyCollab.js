@@ -61,10 +61,10 @@ function CompanyCollab() {
         </div>
         <h1>Company Collaborations</h1>
 
-        <div className="container-panel d-flex p-2 row">
+        <div className="container-panel d-flex ml-3 p-2 row">
             {comCollab?.map((service, index) => (
                 <div
-                    className="col-lg-3 col-md-4 wow fadeInUp m-3"
+                    className="col-lg-3 col-md-4 wow fadeInUp ml-3 mt-3"
                     data-wow-delay={`${0.1 + index * 0.2}s`}
                     key={service.collabName}
                     style={{

@@ -91,7 +91,7 @@ const Ngo = () => {
                   <h5 className="mt-3">{ngo.NGOName}</h5>
                   {/* <p className="text-primary">{ngo.ngopanyRegId}</p> */}
                   Description
-                  <div className="team-social text-center d-flex justify-content-left align-items-center">
+                  <div className="team-social text-center d-flex justify-content-left mt-2">
                     {/* <a className="btn btn-square" href="#">
                       <i className="fab fa-facebook-f"></i>
                     </a>
@@ -101,9 +101,8 @@ const Ngo = () => {
                     <a className="btn btn-square" href="#">
                       <i className="fab fa-instagram"></i> 
                     </a>*/}
-                      {console.log(Ngo.NGOName)}
-                      {Ngo.NgoDesc && <p>{Ngo.NgoDesc}</p>}
-                      {!Ngo.NgoDesc && <p>No Description Available</p>}
+                      {ngo.NgoDesc && <p>{ngo.NgoDesc}</p>}
+                      {!ngo.NgoDesc && <p>No Description Available</p>}
 
                   </div>
                 </div>
