@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { setUser } from "../redux-config/UserSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -9,14 +9,38 @@ function RegisterCom() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const sendData = async (newVol) => {
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const sendData = async (newCom) => {
+    const formData = new FormData();
+
+    // console.log(selectedFile);
+    
+    formData.append("profilePic", selectedFile);
+    formData.append("email", newCom.email);
+    formData.append("password", newCom.password);
+    formData.append("companyName", newCom.companyName);
+    formData.append("companyRegId", newCom.companyRegId);
+    formData.append("companyDesc", newCom.companyDesc);
     try {
-      let response = await axios.post(APIs.Register_Com, newVol);
-      console.log(response.data);
-      dispatch(setUser(response.data));
-      navigate("/");
+      // console.log(formData);
+      let response = await axios.post(APIs.Register_Com, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });if(response){
+        // console.log(response.data.message);
+        dispatch(setUser(response.data));
+        window.alert("Registration Successful");
+        navigate("/")
+    }
+    else{
+      // console.log("No response found");
+      window.alert("No response found");
+    }
     } catch (err) {
       console.log(err);
+      window.alert("Sign Up Failed");
     }
   };
 
@@ -24,16 +48,22 @@ function RegisterCom() {
   const ComPass = useRef();
   const ComEmail = useRef();
   const ComRegId = useRef();
+  const ComDesc = useRef();
 
-  const makeNgoObj = async (e) => {
+  const makeComObj = async (e) => {
     e.preventDefault();
-    const newVol = {
+    const newCom = {
       email: ComEmail.current.value,
       password: ComPass.current.value,
       companyName: ComName.current.value,
       companyRegId: ComRegId.current.value,
+      companyDesc: ComDesc.current.value,
     };
-    sendData(newVol);
+    sendData(newCom);
+  };
+
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
   };
 
   return <>
@@ -87,7 +117,7 @@ function RegisterCom() {
         }}
       >
         
-        <form onSubmit={makeNgoObj}>
+        <form onSubmit={makeComObj}>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="name">Name:</label>
             <br />
@@ -103,7 +133,7 @@ function RegisterCom() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+              required />
           </div>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="email">Email:</label>
@@ -120,7 +150,7 @@ function RegisterCom() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+              required  />
           </div>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="regId">Reg Id:</label>
@@ -137,7 +167,12 @@ function RegisterCom() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+              required  />
+          </div>
+          <div style={{ marginBottom: "15px" }}>
+            <label htmlFor="profilePic">Upload Profile Picture:</label>
+            <br />
+            <input type="file" name="profilePic" onChange={handleFileChange} />
           </div>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="password">Password:</label>
@@ -154,22 +189,23 @@ function RegisterCom() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+              required />
           </div>
           <div style={{ marginBottom: "15px" }}>
-            <label htmlFor="address">Address:</label>
+            <label htmlFor="description">Description:</label>
             <br />
             <textarea
-              id="address"
-              name="address"
-              placeholder="Enter Address"
+              ref={ComDesc}
+              id="description"
+              name="description"
+              // placeholder="Enter Address"
               style={{
                 width: "100%",
                 padding: "10px",
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            ></textarea>
+              required  ></textarea>
           </div>
           <button
             type="submit"
@@ -186,6 +222,7 @@ function RegisterCom() {
           </button>
         </form>
       </div>
+      
     </div>
  </>
 }

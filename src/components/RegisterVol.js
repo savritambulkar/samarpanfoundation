@@ -98,7 +98,7 @@ function RegisterVol() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+            required/>
           </div>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="email">Email:</label>
@@ -115,7 +115,7 @@ function RegisterVol() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+              required />
           </div>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="password">Password:</label>
@@ -132,7 +132,7 @@ function RegisterVol() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+              required />
           </div>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="address">Address:</label>
@@ -146,7 +146,7 @@ function RegisterVol() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            ></textarea>
+              required></textarea>
           </div>
           <button
             type="submit"

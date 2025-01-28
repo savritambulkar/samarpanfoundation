@@ -78,12 +78,12 @@ function Events() {
                 </p>
                 <h1 className="text-white mb-4">Together,we create changes</h1>
                 <p className="text-white mb-4 pb-2">
-                 MISSON, VISION, IMPACT
+                  MISSON, VISION, IMPACT
                 </p>
                 <div className="row g-4">
                   {[
                     { icon: "fa-solid fa-handshake-simple", title: "Impactful callobration", text: "Misson" },
-                    { icon: "fa-solid fa-eye", title: "Contribution leads to a brighter future", text: "Vision"  },
+                    { icon: "fa-solid fa-eye", title: "Contribution leads to a brighter future", text: "Vision" },
                     { icon: "fa-comment-medical", title: "Bridges the gap between needy and Supporters", text: "Impact" },
                     { icon: "fa-headphones", title: "Support", text: "24 Hours" },
                   ].map((feature, index) => (

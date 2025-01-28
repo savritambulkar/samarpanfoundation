@@ -18,24 +18,28 @@ function NgoRegister() {
     formData.append("password", newNGO.password);
     formData.append("NGOName", newNGO.NGOName);
     formData.append("Type", newNGO.Type);
+    formData.append("NgoDesc", newNGO.NgoDesc);
 
     try {
+      // console.log(formData);
       let response = await axios.post(APIs.Register_Ngo, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-      if (response) {
-        console.log(response.data.message);
-        dispatch(setUser(response.data));
-        navigate("/");
-      } else {
+      if(response){
+          // console.log(response.data.message);
+          dispatch(setUser(response.data));
+          window.alert("Registration Successful");
+          navigate("/")
+      }
+      else{
         console.log("No response found");
-        alert("No response found");
+        window.alert("No response found");
       }
     } catch (err) {
       console.log(err);
-      alert("Sign Up Failed");
+      window.alert("Sign Up Failed");
     }
   };
 
@@ -43,6 +47,7 @@ function NgoRegister() {
   const NgoPass = useRef();
   const NgoEmail = useRef();
   const NgoType = useRef();
+  const NgoDesc = useRef();
 
   const makeNgoObj = async (e) => {
     e.preventDefault();
@@ -51,6 +56,7 @@ function NgoRegister() {
       password: NgoPass.current.value,
       NGOName: NgoName.current.value,
       Type: NgoType.current.value,
+      NgoDesc:NgoDesc.current.value
     };
     sendData(newNGO);
   };
@@ -122,7 +128,7 @@ function NgoRegister() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+              required  />
           </div>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="email">Email:</label>
@@ -139,7 +145,7 @@ function NgoRegister() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+              required  />
           </div>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="phone">Type:</label>
@@ -153,7 +159,7 @@ function NgoRegister() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            >
+              required >
               <option>Select NGO Type</option>
               <option value="Widows">Widows</option>
               <option value="OldAge">Old Age</option>
@@ -176,7 +182,7 @@ function NgoRegister() {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            />
+              required  />
           </div>
           <div style={{ marginBottom: "15px" }}>
             <label htmlFor="profilePic">Upload Profile Picture:</label>
@@ -184,18 +190,19 @@ function NgoRegister() {
             <input type="file" name="profilePic" onChange={handleFileChange} />
           </div>
           <div style={{ marginBottom: "15px" }}>
-            <label htmlFor="address">Address:</label>
+            <label htmlFor="description">Description:</label>
             <br />
             <textarea
-              id="address"
-              name="address"
+            ref={NgoDesc}
+              id="description"
+              name="description"
               style={{
                 width: "100%",
                 padding: "10px",
                 borderRadius: "5px",
                 border: "1px solid #ccc",
               }}
-            ></textarea>
+              required  ></textarea>
           </div>
           <button
             type="submit"

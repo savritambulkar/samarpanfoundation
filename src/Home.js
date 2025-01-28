@@ -13,7 +13,7 @@ function Home(){
     <About/>
     <Company/>
     <Ngo/>
-    <Event/>
+    {/* <Event/> */}
     <Contactform/>
        
     

@@ -7,10 +7,11 @@ function Footer(){
     <div className="row g-5">
       <div className="col-lg-3 col-md-6">
         <h5 className="text-light mb-4">Address</h5>
-        <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>Madhovastika, Indore, Madhya Pradesh</p>
+        <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i><Link to="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"> Madhovastika, Indore, Madhya Pradesh  </Link></p>
         <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>9171188434</p>
-        <p className="mb-2"><i className="fa fa-envelope me-3"></i>infoSamarpan@gmail.com</p>
-        <div className="d-flex pt-2"><a className="btn btn-outline-light btn-social rounded-circle" href="#"><i className="fab fa-twitter"></i></a> <a className="btn btn-outline-light btn-social rounded-circle" href="#"><i className="fab fa-facebook-f"></i></a> <a className="btn btn-outline-light btn-social rounded-circle" href="#"><i className="fab fa-youtube"></i></a> <a className="btn btn-outline-light btn-social rounded-circle" href="#"><i className="fab fa-linkedin-in"></i></a></div>
+        <Link to="https://mail.google.com/mail/u/0/#inbox">infoSamarpan@gmail.com</Link>
+        <div className="d-flex pt-2"><Link to="https://www.instagram.com/samarpan181" className="btn btn-outline-light btn-social rounded-circle"  href="#">  <i className="fab fa-instagram"></i></Link > <Link to="https://www.facebook.com/?sk=welcome" className="btn btn-outline-light btn-social rounded-circle" href="#"><i className="fab fa-facebook-f"></i></Link><Link to="https://www.linkedin.com/in/samarpan-foundation-18a0b8349/" className="btn btn-outline-light btn-social rounded-circle" href="#"><i className="fab fa-linkedin-in"></i></Link>
+        </div>
       </div>
       <div className="col-lg-3 col-md-6">
         <h5 className="text-light mb-4">Register Now</h5>

@@ -1,5 +1,44 @@
+import APIs from "../apis/APIs";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setquery } from "../redux-config/queryslice";
+import { useRef } from "react";
+import axios from "axios";
 
 function Contactform(){
+  const dispatch=useDispatch();
+  const navigate=useNavigate();
+  
+  const sentdata =async(query)=>{
+   try{
+     let response = await axios.post(APIs.get_query, query)
+     console.log(response)
+     console.log(response.data)
+     dispatch(setquery(response.data))
+     navigate("/")
+   }
+   catch(err){
+     console.log(err)
+   }
+  }
+
+  const name=useRef();
+  const email=useRef();
+  const Query=useRef();
+  const massage=useRef();
+
+    const queryobj=async(e)=>{
+      e.preventDefault();
+
+      const queries={
+       name:name.current.value,
+        email:email.current.value,
+        Query:Query.current.value,
+        massage:massage.current.value
+      }
+      sentdata(queries)
+    }
+
     return <>
     <div className="container-xxl py-5">
   <div className="container">
@@ -23,7 +62,7 @@ function Contactform(){
           </div>
         </div>
       </div>
-      <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style={{visibility: "visible", animationDelay: "0.5s", animationName: "fadeInUp", border:"1px solid grey"}}>
+      {/* <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style={{visibility: "visible", animationDelay: "0.5s", animationName: "fadeInUp", border:"1px solid grey"}}>
         <div className="bg-white rounded h-100 d-flex align-items-center p-5" >
           <form action="#" method="post">
             <div className="row g-3">
@@ -63,7 +102,46 @@ function Contactform(){
             </div>
           </form>
         </div>
+      </div> */}
+      <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style={{visibility: "visible", animationDelay: "0.1s", animationName: "fadeIn"}}>
+        <div className="bg-light rounded p-5">
+          <p className="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
+          <h1 className="mb-4">Have Any Query? Please Contact Us!</h1>
+          {/* <p className="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax &amp; PHP in a few minutes. Just copy and paste the files, add a little code and you're done. Download Now.</p> */}
+          <form onSubmit={queryobj}>
+            <div className="row g-3">
+              <div className="col-md-6">
+                <div className="form-floating">
+                  <input ref={name} type="text" className="form-control" id="name" placeholder="Your Name"/>
+                  <label for="name">Your Name</label>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="form-floating">
+                  <input  ref={email} type="email" className="form-control" id="email" placeholder="Your Email"/>
+                  <label for="email">Your Email</label>
+                </div>
+              </div>
+              <div className="col-12">
+                <div className="form-floating">
+                  <input ref={Query} type="text" className="form-control" id="subject" placeholder="Query"/>
+                  <label for="Query">Query</label>
+                </div>
+              </div>
+              <div className="col-12">
+                <div className="form-floating">
+                  <textarea ref={massage} className="form-control" placeholder="Leave a message here" id="message" style={{height:"100px"}}></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div className="col-12">
+                <button className="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
+
     </div>
   </div>
 </div>

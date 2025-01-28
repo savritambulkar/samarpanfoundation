@@ -3,8 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setquery } from "../redux-config/queryslice";
 import { useRef } from "react";
-import axios
- from "axios";
+import axios from "axios";
 
 function Contactslide(){
    const dispatch=useDispatch();
@@ -12,7 +11,7 @@ function Contactslide(){
    
    const sentdata =async(query)=>{
     try{
-      let response = await axios.get(APIs.get_query, query)
+      let response = await axios.post(APIs.get_query, query)
       console.log(response)
       console.log(response.data)
       dispatch(setquery(response.data))
@@ -29,13 +28,13 @@ function Contactslide(){
    const massage=useRef();
 
      const queryobj=async(e)=>{
-       e.preventdefault();
+       e.preventDefault()
 
        const queries={
         name:name.current.value,
-         email:email.current.value,
-         Query:Query.current.value,
-         massage:massage.current.value
+        email:email.current.value,
+        Query:Query.current.value,
+        massage:massage.current.value
        }
        sentdata(queries)
      }
@@ -47,7 +46,7 @@ function Contactslide(){
     <nav aria-label="breadcrumb animated slideInDown">
       <ol className="breadcrumb text-uppercase mb-0">
         <li className="breadcrumb-item"><a className="text-white" >Home</a></li>
-        <li className="breadcrumb-item"><a className="text-white" >Pages</a></li>
+        {/* <li className="breadcrumb-item"><a className="text-white" >Pages</a></li> */}
         <li className="breadcrumb-item text-primary active" aria-current="page">Contact</li>
       </ol>
     </nav>
@@ -63,7 +62,7 @@ function Contactslide(){
           <div className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style={{width:"60px",height:"70px"}}><i className="fa fa-map-marker-alt text-primary"></i></div>
           <div className="ms-4">
             <p className="mb-2">Address</p>
-            <h5 className="mb-0">123 Street, New York, USA</h5>
+            <h5 className="mb-0">Madhovastika, Indore, Madhya Pradesh</h5>
           </div>
         </div>
       </div>
@@ -72,7 +71,7 @@ function Contactslide(){
           <div className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style={{width:"60px",height:"70px"}}><i className="fa fa-phone-alt text-primary"></i></div>
           <div className="ms-4">
             <p className="mb-2">Call Us Now</p>
-            <h5 className="mb-0">+012 345 6789</h5>
+            <h5 className="mb-0">9171188434</h5>
           </div>
         </div>
       </div>
@@ -94,19 +93,19 @@ function Contactslide(){
             <div className="row g-3">
               <div className="col-md-6">
                 <div className="form-floating">
-                  <input ref={name} type="text" className="form-control" id="name" placeholder="Your Name"/>
+                  <input ref={name} type="text" className="form-control" id="name" placeholder="Your Name" required/>
                   <label for="name">Your Name</label>
                 </div>
               </div>
               <div className="col-md-6">
                 <div className="form-floating">
-                  <input  ref={email} type="email" className="form-control" id="email" placeholder="Your Email"/>
+                  <input ref={email} type="email" className="form-control" id="email" placeholder="Your Email" required/>
                   <label for="email">Your Email</label>
                 </div>
               </div>
               <div className="col-12">
                 <div className="form-floating">
-                  <input ref={Query} type="text" className="form-control" id="subject" placeholder="Query"/>
+                  <input ref={Query} type="text" className="form-control" id="subject" placeholder="Query" required/>
                   <label for="Query">Query</label>
                 </div>
               </div>

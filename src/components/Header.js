@@ -1,6 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { signOut } from "../redux-config/UserSlice";
 
 function Header() {
+    const navigate = useNavigate();
+    const {isLoggedIn , type} = useSelector((store)=>store.user);
+    const dispatch = useDispatch();
+    // console.log("in header..............");
+    // console.log(type);
+    // console.log("in header..............");
+
     return (
         <>
             <div className="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
@@ -8,11 +17,11 @@ function Header() {
                     <div className="col-lg-7 px-5 text-start">
                         <div className="h-100 d-inline-flex align-items-center py-3 me-4">
                             <small className="fa fa-map-marker-alt text-primary me-2"></small>
-                            <small>Indore Madhya Pradesh</small>
+                            <small><Link to="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></Link>Indore Madhya  Pradesh</small>
                         </div>
                         <div className="h-100 d-inline-flex align-items-center py-3">
                             <small className="fa fa-envelope text-primary me-2"></small>
-                            infoSamarpan@gmail.com
+                           <Link to="https://mail.google.com/mail/u/0/#inbox">infoSamarpan@gmail.com</Link>
                         </div>
                     </div>
                     <div className="col-lg-5 px-5 text-end">
@@ -21,16 +30,16 @@ function Header() {
                             <small>9171188434</small>
                         </div>
                         <div className="h-100 d-inline-flex align-items-center">
-                            <Link className="btn btn-sm-square rounded-circle bg-white text-primary me-1">
+                            <Link to="https://www.facebook.com/?sk=welcome" className="btn btn-sm-square rounded-circle bg-white text-primary me-1">
                                 <i className="fab fa-facebook-f"></i>
                             </Link>
-                            <Link className="btn btn-sm-square rounded-circle bg-white text-primary me-1">
+                            {/* <Link className="btn btn-sm-square rounded-circle bg-white text-primary me-1">
                                 <i className="fab fa-twitter"></i>
-                            </Link>
-                            <Link className="btn btn-sm-square rounded-circle bg-white text-primary me-1">
+                            </Link> */}
+                            <Link to="https://www.linkedin.com/in/samarpan-foundation-18a0b8349/" className="btn btn-sm-square rounded-circle bg-white text-primary me-1">
                                 <i className="fab fa-linkedin-in"></i>
                             </Link>
-                            <Link className="btn btn-sm-square rounded-circle bg-white text-primary me-0">
+                            <Link to="https://www.instagram.com/samarpan181" className="btn btn-sm-square rounded-circle bg-white text-primary me-0">
                                 <i className="fab fa-instagram"></i>
                             </Link>
                         </div>
@@ -63,20 +72,35 @@ function Header() {
                         <Link to="/About" className="nav-item nav-link">
                             About
                         </Link>
-                        <Link to="/Collaborations" className="nav-item nav-link">
-                            Collaborations
-                        </Link>
                         <Link to="/Contact" className="nav-item nav-link">
                             Contact
                         </Link>
-                        <div className="nav-item dropdown">
+                        {(isLoggedIn) && type == "Company" && <Link to="/CompanyCollaborations" className="nav-item nav-link">
+                            Collaborations
+                        </Link>}
+
+                        {(isLoggedIn) && type == "Ngo" && <Link to="/NgoCollaborations" className="nav-item nav-link">
+                            Collaborations
+                        </Link>}
+
+                        {(isLoggedIn)&& type == "Company" && <Link to="/NgoList" className="nav-item nav-link">
+                            NGOs
+                        </Link>}
+                        {(isLoggedIn)&& type == "Ngo" && <Link to="/CompanyList" className="nav-item nav-link">
+                            Companies
+                        </Link>}
+                        
+                        {(isLoggedIn) &&<Link onClick={()=> {window.alert("Logging you out"); dispatch(signOut());}} to="/" className="nav-item nav-link">
+                            Log Out
+                        </Link>}
+                        {(!isLoggedIn) &&<div className="nav-item dropdown">
                             <Link to="/Service" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                                 Get Involve
                             </Link>
                             <div className="dropdown-menu rounded-0 rounded-bottom m-0">
-                                <Link className="dropdown-item" to={"RegisterVol"}>
+                                {/* <Link className="dropdown-item" to={"RegisterVol"}>
                                     Volunteer Registration
-                                </Link>
+                                </Link> */}
                                 <Link className="dropdown-item" to={"RegisterNgo"}>
                                     NGO Registration
                                 </Link>
@@ -84,12 +108,12 @@ function Header() {
                                     Company Registration
                                 </Link>
                             </div>
-                        </div>
-                        <Link to="/Login" className="nav-item nav-link">
+                        </div>}
+                        {(!isLoggedIn) &&<Link to="/Login" className="nav-item nav-link">
                             LogIn
-                        </Link>
+                        </Link>}
                     </div>
-                    <Link className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">
+                    <Link to="/donate" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">
                         DONATE
                         <i className="fa fa-arrow-right ms-3"></i>
                     </Link>
